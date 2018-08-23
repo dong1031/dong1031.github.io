@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dong1031.github.io/"/>
-  <updated>2018-08-13T18:07:08.821Z</updated>
+  <updated>2018-08-18T07:33:50.360Z</updated>
   <id>http://dong1031.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从重装到配置</title>
+    <link href="http://dong1031.github.io/2018/08/17/%E4%BB%8E%E9%87%8D%E8%A3%85%E5%88%B0%E9%85%8D%E7%BD%AE.html"/>
+    <id>http://dong1031.github.io/2018/08/17/从重装到配置.html</id>
+    <published>2018-08-17T10:28:00.000Z</published>
+    <updated>2018-08-18T07:33:50.360Z</updated>
+    
+    <content type="html"><![CDATA[<p>有很多小伙伴不会重装电脑，惧怕重装电脑，比如小什么良，小伟什么，什么伟良，他们以为重装电脑一定会把电脑里面全部数据（大概是一些.avi文件吧）都格式化掉，然后没有良好健康的生活体验，滑稽</p><blockquote><p>现在的游戏随随便便都是几十G的（就像什么良的那些爱情动作dark♂作），重新下载会十分麻烦，当然网速贼快的请忽视，不玩游戏的也忽视吧</p></blockquote><blockquote><p>身为程序员，有许多环境变量需要配置（其实也不是很多啦··），还有很多奇奇怪怪的软件啥的，如果属鱼的话，那记忆时间就那几秒，装回来重新部署其实也挺麻烦的，对了，emmm，还有啥ssh那些密钥的，还有有的网站是记住密码的，然后忘记了，就很尴尬</p></blockquote><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文的主要内容是重装系统，装驱动，装软件，配环境，部署服务器，balabala。。。。,我以win10和普通编程工具及比较干净无广告好用的日常软件为例，过程中有少部分没有截图，emmm，主要是忘了，沉迷操作无法自拔，大家莫要见怪，毕竟百度谷歌上非常多，而且，我文字描述会尽量详细，让各位看官能够了然于心，舒服。 </p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>emmm，偷下懒，在左侧有目录，嘿嘿嘿</p><h3 id="可能要用到的工具推荐"><a href="#可能要用到的工具推荐" class="headerlink" title="可能要用到的工具推荐"></a>可能要用到的工具推荐</h3><ol><li><strong>UltraISO</strong>很舒服很好用，推荐一波，百度一下，问题不大，不一定要破解版，都一样的，也可以在<a href="https://cn.ultraiso.net/xiazai.html" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网下载。不怎么推荐pe工具，可能带有捆绑，当然只是可能，我也没用过，emmm，就是对pe有点小排斥那么个样子。</li><li>一个<strong>windows10</strong>镜像就是<strong>windows10.iso</strong>的，推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener"><strong>我告诉你</strong></a>下载（没错就是我告诉你而不是你告诉我，滑稽），纯正官方镜像干净无捆绑，不像雨林什么，什么木风的捆绑一些奇奇怪怪的旧版软件，等死</li><li><strong>一个8G或以上的U盘</strong>，里面的东西记得先拿出来哦，不然格式化了找不到就很尴尬了。如果重装只是为了清掉C盘的话，可以把U盘的东西存到其他盘，如果是格式化全盘，或者，想重新分区的话，可以把U盘的东西放上云盘或者存到别人的电脑里面，我一般都是上传云盘的，毕竟，U盘总有些嘿嘿嘿，都懂的。</li><li><strong>MediaCreationTool</strong>，可以去<a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。前面3点是使用U盘启动的话需要准备的，如果不想用U盘启动，或者没有U盘或者不想下载制作启动盘那么麻烦的话可以可以用这个官方的下载器，也不错，挺舒服的，傻瓜式操作。</li><li><strong>驱动人生</strong>或者<strong>驱动精灵</strong>，两款不过的装驱动软件，贴一下他们的官网，毕竟百度的搜索十分6，总有广告想害朕，<a href="http://www.160.com/" target="_blank" rel="noopener"><strong>驱动人生</strong></a>下载网卡版不错，我现在在用，还行，如果下载驱动精灵就点<a href="http://www.drivergenius.com/" target="_blank" rel="noopener"><strong>这里</strong></a>。</li><li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener"><strong>jdk</strong></a>，<a href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/photon/R/eclipse-inst-win64.exe" target="_blank" rel="noopener"><strong>eclipse</strong></a>，<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener"><strong>maven</strong></a>，<a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener"><strong>tomcat</strong></a>，<a href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"><strong>mysql</strong></a>，<a href="https://redis.io/download" target="_blank" rel="noopener"><strong>redis</strong></a>，<a href="http://www.dcloud.io/" target="_blank" rel="noopener"><strong>HBuilder</strong></a>，<a href="https://gitforwindows.org/" target="_blank" rel="noopener"><strong>git for windows</strong></a>，<a href="http://www.hostbuf.com/" target="_blank" rel="noopener"><strong>finalshell</strong></a>，<a href="https://www.mockplus.cn/" target="_blank" rel="noopener"><strong>mockplus</strong></a>，<strong>powerdesigner</strong>(破解版直接百度就行了)，<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener"><strong>notepad++</strong></a>，<a href="https://redisdesktop.com/download" target="_blank" rel="noopener"><strong>redisDesktopManager</strong></a>，这些也许是程序员可能会用到到的工具，不需要的可以跳过，问题不大，而且链接上都是我的推荐版本，目前使用并无问题，具体操作在后文有讲解。</li><li><strong>Potplayer</strong>，一款不错的视频软件，干净无广告，功能强大，推荐一波，点<a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li><li><strong>网易云音乐</strong>，一块不错的音乐软件，干净好用，无广告，里面的人又有趣，说话又好听，贼喜欢这里的，可用win10自带的，不过手感一般，推荐另外下载，点<a href="https://music.163.com/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li><li><strong>irfanView</strong>，一款不错的看图片软件，干净无广告，推荐一波，点<a href="https://www.irfanview.com/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li><li><strong>BandZip</strong>，一款不错的压缩软件，干净无广告，推荐一波，点<a href="http://www.bandisoft.com/bandizip/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li><li><strong>迅雷极速版</strong>，一款不错的下载软件，相比迅雷干净无广告，推荐一波，点<a href="https://www.irfanview.com/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li><li><a href="https://weixin.qq.com/" target="_blank" rel="noopener"><strong>微信</strong></a>，<a href="https://tim.qq.com/" target="_blank" rel="noopener"><strong>QQ</strong></a>是两款比较常用的聊天软件，这里推荐的是桌面版的微信，和tim版的qq这个比较干爽没有太多的广告，用起来舒服，都是推荐。</li><li><strong>Chrome</strong>，<a href="https://www.google.cn/chrome/" target="_blank" rel="noopener"><strong>谷歌浏览器</strong></a>，某歌强无敌，天下第一，不服憋着，如果没有科学上网可以用一下火狐，和谷歌差不多</li><li><strong>office工具</strong>，推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener"><strong>我告诉你</strong></a>下载，然后破解，当然如果可以用学校邮箱可以注册office365教育版，也行。</li><li><strong>百度网盘</strong>，你懂的<blockquote><p>emmm，为啥没安全软件输入法啥的，这些东西用自带的就行了，裸奔啥的问题不大</p></blockquote></li></ol><h2 id="正文开始（bb了这么就终于正文了）"><a href="#正文开始（bb了这么就终于正文了）" class="headerlink" title="正文开始（bb了这么就终于正文了）"></a>正文开始（bb了这么就终于正文了）</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有很多小伙伴不会重装电脑，惧怕重装电脑，比如小什么良，小伟什么，什么伟良，他们以为重装电脑一定会把电脑里面全部数据（大概是一些.avi文件吧）都格式化掉，然后没有良好健康的生活体验，滑稽&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;现在的游戏随随便便都是几十G的（就像什么良的那
+      
+    
+    </summary>
+    
+      <category term="配置" scheme="http://dong1031.github.io/categories/%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="重装系统" scheme="http://dong1031.github.io/tags/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="java配置" scheme="http://dong1031.github.io/tags/java%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="服务器配置" scheme="http://dong1031.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="数据库配置" scheme="http://dong1031.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="干净无广告无残留软件" scheme="http://dong1031.github.io/tags/%E5%B9%B2%E5%87%80%E6%97%A0%E5%B9%BF%E5%91%8A%E6%97%A0%E6%AE%8B%E7%95%99%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SomeGif</title>
+    <link href="http://dong1031.github.io/2018/08/17/SomeGif.html"/>
+    <id>http://dong1031.github.io/2018/08/17/SomeGif.html</id>
+    <published>2018-08-17T05:50:03.000Z</published>
+    <updated>2018-08-18T06:55:21.676Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/08/17/SomeGif/ass.gif" alt=""><br><img src="/2018/08/17/SomeGif/pipiduini.gif" alt=""><br><img src="/2018/08/17/SomeGif/zhualian.gif" alt=""><br><img src="/2018/08/17/SomeGif/saocaozuo.gif" alt=""><br><a id="more"></a><br><img src="/2018/08/17/SomeGif/enheng.gif" alt=""><br><img src="/2018/08/17/SomeGif/fangungou.gif" alt=""><br><img src="/2018/08/17/SomeGif/higirl.gif" alt=""><br><img src="/2018/08/17/SomeGif/king1.gif" alt=""><br><img src="/2018/08/17/SomeGif/king2.gif" alt=""><br><img src="/2018/08/17/SomeGif/king3.gif" alt=""><br><img src="/2018/08/17/SomeGif/banana1.gif" alt=""><br><img src="/2018/08/17/SomeGif/banana2.gif" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2018/08/17/SomeGif/ass.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;/2018/08/17/SomeGif/pipiduini.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;/2018/08/17/SomeGif/zhualian.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;/2018/08/17/SomeGif/saocaozuo.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="搞笑" scheme="http://dong1031.github.io/categories/%E6%90%9E%E7%AC%91/"/>
+    
+    
+      <category term="gif" scheme="http://dong1031.github.io/tags/gif/"/>
+    
+      <category term="哲♂学" scheme="http://dong1031.github.io/tags/%E5%93%B2%E2%99%82%E5%AD%A6/"/>
+    
+      <category term="dog&amp;cat" scheme="http://dong1031.github.io/tags/dog-cat/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[从重装到配置]]></title>
+    <url>%2F2018%2F08%2F17%2F%E4%BB%8E%E9%87%8D%E8%A3%85%E5%88%B0%E9%85%8D%E7%BD%AE.html</url>
+    <content type="text"><![CDATA[有很多小伙伴不会重装电脑，惧怕重装电脑，比如小什么良，小伟什么，什么伟良，他们以为重装电脑一定会把电脑里面全部数据（大概是一些.avi文件吧）都格式化掉，然后没有良好健康的生活体验，滑稽 现在的游戏随随便便都是几十G的（就像什么良的那些爱情动作dark♂作），重新下载会十分麻烦，当然网速贼快的请忽视，不玩游戏的也忽视吧 身为程序员，有许多环境变量需要配置（其实也不是很多啦··），还有很多奇奇怪怪的软件啥的，如果属鱼的话，那记忆时间就那几秒，装回来重新部署其实也挺麻烦的，对了，emmm，还有啥ssh那些密钥的，还有有的网站是记住密码的，然后忘记了，就很尴尬 写在前面本文的主要内容是重装系统，装驱动，装软件，配环境，部署服务器，balabala。。。。,我以win10和普通编程工具及比较干净无广告好用的日常软件为例，过程中有少部分没有截图，emmm，主要是忘了，沉迷操作无法自拔，大家莫要见怪，毕竟百度谷歌上非常多，而且，我文字描述会尽量详细，让各位看官能够了然于心，舒服。 目录emmm，偷下懒，在左侧有目录，嘿嘿嘿 可能要用到的工具推荐 UltraISO很舒服很好用，推荐一波，百度一下，问题不大，不一定要破解版，都一样的，也可以在这里直达官网下载。不怎么推荐pe工具，可能带有捆绑，当然只是可能，我也没用过，emmm，就是对pe有点小排斥那么个样子。 一个windows10镜像就是windows10.iso的，推荐去我告诉你下载（没错就是我告诉你而不是你告诉我，滑稽），纯正官方镜像干净无捆绑，不像雨林什么，什么木风的捆绑一些奇奇怪怪的旧版软件，等死 一个8G或以上的U盘，里面的东西记得先拿出来哦，不然格式化了找不到就很尴尬了。如果重装只是为了清掉C盘的话，可以把U盘的东西存到其他盘，如果是格式化全盘，或者，想重新分区的话，可以把U盘的东西放上云盘或者存到别人的电脑里面，我一般都是上传云盘的，毕竟，U盘总有些嘿嘿嘿，都懂的。 MediaCreationTool，可以去这里直达官网。前面3点是使用U盘启动的话需要准备的，如果不想用U盘启动，或者没有U盘或者不想下载制作启动盘那么麻烦的话可以可以用这个官方的下载器，也不错，挺舒服的，傻瓜式操作。 驱动人生或者驱动精灵，两款不过的装驱动软件，贴一下他们的官网，毕竟百度的搜索十分6，总有广告想害朕，驱动人生下载网卡版不错，我现在在用，还行，如果下载驱动精灵就点这里。 jdk，eclipse，maven，tomcat，mysql，redis，HBuilder，git for windows，finalshell，mockplus，powerdesigner(破解版直接百度就行了)，notepad++，redisDesktopManager，这些也许是程序员可能会用到到的工具，不需要的可以跳过，问题不大，而且链接上都是我的推荐版本，目前使用并无问题，具体操作在后文有讲解。 Potplayer，一款不错的视频软件，干净无广告，功能强大，推荐一波，点这里直达官网。 网易云音乐，一块不错的音乐软件，干净好用，无广告，里面的人又有趣，说话又好听，贼喜欢这里的，可用win10自带的，不过手感一般，推荐另外下载，点这里直达官网。 irfanView，一款不错的看图片软件，干净无广告，推荐一波，点这里直达官网。 BandZip，一款不错的压缩软件，干净无广告，推荐一波，点这里直达官网。 迅雷极速版，一款不错的下载软件，相比迅雷干净无广告，推荐一波，点这里直达官网。 微信，QQ是两款比较常用的聊天软件，这里推荐的是桌面版的微信，和tim版的qq这个比较干爽没有太多的广告，用起来舒服，都是推荐。 Chrome，谷歌浏览器，某歌强无敌，天下第一，不服憋着，如果没有科学上网可以用一下火狐，和谷歌差不多 office工具，推荐去我告诉你下载，然后破解，当然如果可以用学校邮箱可以注册office365教育版，也行。 百度网盘，你懂的 emmm，为啥没安全软件输入法啥的，这些东西用自带的就行了，裸奔啥的问题不大 正文开始（bb了这么就终于正文了）]]></content>
+      <categories>
+        <category>配置</category>
+      </categories>
+      <tags>
+        <tag>重装系统</tag>
+        <tag>java配置</tag>
+        <tag>服务器配置</tag>
+        <tag>数据库配置</tag>
+        <tag>干净无广告无残留软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SomeGif]]></title>
+    <url>%2F2018%2F08%2F17%2FSomeGif.html</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>搞笑</category>
+      </categories>
+      <tags>
+        <tag>gif</tag>
+        <tag>哲♂学</tag>
+        <tag>dog&amp;cat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F08%2F13%2Fhello-world.html</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
