@@ -500,35 +500,35 @@
       
         
           
-            <p>有很多小伙伴不会重装电脑，惧怕重装电脑，比如小什么良，小伟什么，什么伟良，他们以为重装电脑一定会把电脑里面全部数据（大概是一些.avi文件吧）都格式化掉，然后没有良好健康的生活体验，滑稽</p>
+            <p>有很多小伙伴不会重装电脑，惧怕重装电脑，他们以为重装电脑一定会把电脑里面全部数据（大概是一些.avi文件吧）都格式化掉，然后没有良好健康的生活体验，滑稽</p>
 <blockquote>
-<p>现在的游戏随随便便都是几十G的（就像什么良的那些爱情动作dark♂作），重新下载会十分麻烦，当然网速贼快的请忽视，不玩游戏的也忽视吧</p>
+<p>现在的游戏随随便便都是几十G的（比如那些爱情动作dark♂作），重新下载会十分麻烦，当然网速贼快的请忽视，不玩游戏的也忽视吧</p>
 </blockquote>
 <blockquote>
 <p>身为程序员，有许多环境变量需要配置（其实也不是很多啦··），还有很多奇奇怪怪的软件啥的，如果属鱼的话，那记忆时间就那几秒，装回来重新部署其实也挺麻烦的，对了，emmm，还有啥ssh那些密钥的，还有有的网站是记住密码的，然后忘记了，就很尴尬</p>
 </blockquote>
-<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文的主要内容是重装系统，装驱动，装软件，配环境，部署服务器，balabala。。。。,我以win10和普通编程工具及比较干净无广告好用的日常软件为例，过程中有少部分没有截图，emmm，主要是忘了，沉迷操作无法自拔，大家莫要见怪，毕竟百度谷歌上非常多，而且，我文字描述会尽量详细，让各位看官能够了然于心，舒服。 </p>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>emmm，偷下懒，在左侧有目录，嘿嘿嘿</p>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文的主要内容是重装系统，装驱动，装软件，配环境，我以win10和普通编程工具及比较干净无广告好用的日常软件为例，过程中大部分没有截图，emmm，主要是忘了，沉迷操作无法自拔，但是，我文字描述会尽量详细。 </p>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>emmm，偷下懒，在左侧有目录</p>
 <h3 id="可能要用到的工具推荐"><a href="#可能要用到的工具推荐" class="headerlink" title="可能要用到的工具推荐"></a>可能要用到的工具推荐</h3><ol>
-<li><strong>UltraISO</strong>很舒服很好用，推荐一波，百度一下，问题不大，不一定要破解版，都一样的，也可以在<a href="https://cn.ultraiso.net/xiazai.html" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网下载。不怎么推荐pe工具，可能带有捆绑，当然只是可能，我也没用过，emmm，就是对pe有点小排斥那么个样子。</li>
-<li>一个<strong>windows10</strong>镜像就是<strong>windows10.iso</strong>的，推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener"><strong>我告诉你</strong></a>下载（没错就是我告诉你而不是你告诉我，滑稽），纯正官方镜像干净无捆绑，不像雨林什么，什么木风的捆绑一些奇奇怪怪的旧版软件，等死</li>
-<li><strong>一个8G或以上的U盘</strong>，里面的东西记得先拿出来哦，不然格式化了找不到就很尴尬了。如果重装只是为了清掉C盘的话，可以把U盘的东西存到其他盘，如果是格式化全盘，或者，想重新分区的话，可以把U盘的东西放上云盘或者存到别人的电脑里面，我一般都是上传云盘的，毕竟，U盘总有些嘿嘿嘿，都懂的。</li>
-<li><strong>MediaCreationTool</strong>，可以去<a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。前面3点是使用U盘启动的话需要准备的，如果不想用U盘启动，或者没有U盘或者不想下载制作启动盘那么麻烦的话可以可以用这个官方的下载器，也不错，挺舒服的，傻瓜式操作。</li>
-<li><strong>驱动人生</strong>或者<strong>驱动精灵</strong>，两款不过的装驱动软件，贴一下他们的官网，毕竟百度的搜索十分6，总有广告想害朕，<a href="http://www.160.com/" target="_blank" rel="noopener"><strong>驱动人生</strong></a>下载网卡版不错，我现在在用，还行，如果下载驱动精灵就点<a href="http://www.drivergenius.com/" target="_blank" rel="noopener"><strong>这里</strong></a>。</li>
-<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener"><strong>jdk</strong></a>，<a href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/photon/R/eclipse-inst-win64.exe" target="_blank" rel="noopener"><strong>eclipse</strong></a>，<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener"><strong>maven</strong></a>，<a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener"><strong>tomcat</strong></a>，<a href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"><strong>mysql</strong></a>，<a href="https://redis.io/download" target="_blank" rel="noopener"><strong>redis</strong></a>，<a href="http://www.dcloud.io/" target="_blank" rel="noopener"><strong>HBuilder</strong></a>，<a href="https://gitforwindows.org/" target="_blank" rel="noopener"><strong>git for windows</strong></a>，<a href="http://www.hostbuf.com/" target="_blank" rel="noopener"><strong>finalshell</strong></a>，<a href="https://www.mockplus.cn/" target="_blank" rel="noopener"><strong>mockplus</strong></a>，<strong>powerdesigner</strong>(破解版直接百度就行了)，<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener"><strong>notepad++</strong></a>，<a href="https://redisdesktop.com/download" target="_blank" rel="noopener"><strong>redisDesktopManager</strong></a>，这些也许是程序员可能会用到到的工具，不需要的可以跳过，问题不大，而且链接上都是我的推荐版本，目前使用并无问题，具体操作在后文有讲解。</li>
-<li><strong>Potplayer</strong>，一款不错的视频软件，干净无广告，功能强大，推荐一波，点<a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li>
-<li><strong>网易云音乐</strong>，一块不错的音乐软件，干净好用，无广告，里面的人又有趣，说话又好听，贼喜欢这里的，可用win10自带的，不过手感一般，推荐另外下载，点<a href="https://music.163.com/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li>
-<li><strong>irfanView</strong>，一款不错的看图片软件，干净无广告，推荐一波，点<a href="https://www.irfanview.com/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li>
-<li><strong>BandZip</strong>，一款不错的压缩软件，干净无广告，推荐一波，点<a href="http://www.bandisoft.com/bandizip/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li>
-<li><strong>迅雷极速版</strong>，一款不错的下载软件，相比迅雷干净无广告，推荐一波，点<a href="https://www.irfanview.com/" target="_blank" rel="noopener"><strong>这里</strong></a>直达官网。</li>
-<li><a href="https://weixin.qq.com/" target="_blank" rel="noopener"><strong>微信</strong></a>，<a href="https://tim.qq.com/" target="_blank" rel="noopener"><strong>QQ</strong></a>是两款比较常用的聊天软件，这里推荐的是桌面版的微信，和tim版的qq这个比较干爽没有太多的广告，用起来舒服，都是推荐。</li>
-<li><strong>Chrome</strong>，<a href="https://www.google.cn/chrome/" target="_blank" rel="noopener"><strong>谷歌浏览器</strong></a>，某歌强无敌，天下第一，不服憋着，如果没有科学上网可以用一下火狐，和谷歌差不多</li>
-<li><strong>office工具</strong>，推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener"><strong>我告诉你</strong></a>下载，然后破解，当然如果可以用学校邮箱可以注册office365教育版，也行。</li>
-<li><strong>百度网盘</strong>，你懂的<blockquote>
-<p>emmm，为啥没安全软件输入法啥的，这些东西用自带的就行了，裸奔啥的问题不大</p>
-</blockquote>
-</li>
+<li><a href="http://www.tongyongpe.com/" target="_blank" rel="noopener"><strong>PE工具箱</strong></a>挺好用的启动盘制作软件，里面包含一些常用的工具，简单易用。</li>
+<li>一个<strong>windows10</strong>镜像就是<strong>windows10.iso</strong>的，推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">我告诉你</a>下载（没错就是我告诉你而不是你告诉我，滑稽），纯正官方镜像干净无捆绑，不像雨林什么，什么木风的捆绑一些奇奇怪怪的旧版软件，等死</li>
+<li><strong>一个8G或以上的U盘</strong>，里面的东西记得先拿出来哦，不然格式化了找不到就很尴尬了。如果重装只是为了清掉C盘的话，可以把U盘的东西存到其他盘，如果是格式化全盘，或者，想重新分区的话，可以把U盘的东西放上云盘或者存到别人的电脑里面。</li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener"><strong>jdk</strong></a>，<a href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/photon/R/eclipse-inst-win64.exe" target="_blank" rel="noopener"><strong>eclipse</strong></a>，<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener"><strong>maven</strong></a>，<a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener"><strong>tomcat</strong></a>，<a href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"><strong>mysql</strong></a>，<a href="https://redis.io/download" target="_blank" rel="noopener"><strong>redis</strong></a>，<a href="http://www.dcloud.io/" target="_blank" rel="noopener"><strong>HBuilder</strong></a>，<a href="https://gitforwindows.org/" target="_blank" rel="noopener"><strong>git for windows</strong></a>，<a href="http://www.hostbuf.com/" target="_blank" rel="noopener"><strong>finalshell</strong></a>，<a href="https://www.mockplus.cn/" target="_blank" rel="noopener"><strong>mockplus</strong></a>，<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener"><strong>notepad++</strong></a>，<a href="https://redisdesktop.com/download" target="_blank" rel="noopener"><strong>redisDesktopManager</strong></a>，<a href="https://nodejs.org/en/" target="_blank" rel="noopener"><strong>node.js</strong></a>，<strong>powerdesigner</strong>(破解版直接百度就行了)这些也许是程序员可能会用到到的工具，不需要的可以跳过，问题不大，而且链接上都是我的推荐版本，目前使用并无问题，具体操作在后文有讲解。</li>
+<li><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener"><strong>Potplayer</strong></a>，一款不错的视频软件，干净无广告，功能强大。</li>
+<li><a href="https://music.163.com/" target="_blank" rel="noopener"><strong>网易云音乐</strong></a>，一块不错的音乐软件，干净好用，无广告，里面的人又有趣，说话又好听，超喜欢这里的，可用win10自带的uwp版，可以到应用商店获取。</li>
+<li><a href="https://www.irfanview.com/" target="_blank" rel="noopener"><strong>irfanView</strong></a>，一款不错的看图片软件，干净无广告。</li>
+<li><a href="http://www.bandisoft.com/bandizip/" target="_blank" rel="noopener"><strong>BandZip</strong></a>，一款不错的压缩软件，干净无广告。</li>
+<li><a href="http://x.xunlei.com/" target="_blank" rel="noopener"><strong>迅雷x</strong></a>，一款不错的下载软件，虽然有一些广告，但是总体上问题不大，下种子文件使用起来还不错。</li>
+<li><a href="https://weixin.qq.com/" target="_blank" rel="noopener"><strong>微信</strong></a>，<a href="https://tim.qq.com/" target="_blank" rel="noopener"><strong>QQ</strong></a>是两款比较常用的聊天软件，这里推荐的是桌面版的微信，和tim版的qq这个比较干爽没有太多的广告。</li>
+<li><a href="https://www.google.cn/chrome/" target="_blank" rel="noopener"><strong>Chrome</strong></a>，谷歌浏览器，简约使用，界面清新，装一些扩展的插件用起来更加方便舒服。</li>
+<li><strong>office工具</strong>，推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">我告诉你</a>下载，然后破解，当然如果可以用学校邮箱可以注册office365教育版，也行，不过比较麻烦。</li>
+<li><a href="http://www.wps.cn/" target="_blank" rel="noopener"><strong>WPS</strong></a>，这里再推荐一个office工具，这个虽然有一些广告，不过无伤大雅，因为我确实没找到什么比较好的工具。</li>
+<li><a href="https://www.teamviewer.com/zhCN/" target="_blank" rel="noopener"><strong>TeamViewer</strong></a>，这是一个能在任何防火墙和NAT代理的后台用于远程控制的应用程序，桌面共享和文件传输的简单且快速的解决方案。</li>
+<li><a href="https://pan.baidu.com/download" target="_blank" rel="noopener"><strong>百度网盘</strong></a>，你懂的。</li>
 </ol>
+<blockquote>
+<p>emmm，为啥没安全软件输入法啥的，这些东西用自带的就行了，裸奔啥的问题不大，当然如果心里有点安慰有点保障的话，可以用360其实也行啦，修改一下配置，360其实也不会很烦，适当使用是最好的，还有<a href="https://www.huorong.cn/" target="_blank" rel="noopener"><strong>火绒</strong></a>，相对于360我更推荐这个火绒</p>
+</blockquote>
 <h2 id="正文开始（bb了这么就终于正文了）"><a href="#正文开始（bb了这么就终于正文了）" class="headerlink" title="正文开始（bb了这么就终于正文了）"></a>正文开始（bb了这么就终于正文了）</h2>
           
         
@@ -582,7 +582,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dong1031.github.io/2018/08/17/SomeGif.html">
+    <link itemprop="mainEntityOfPage" href="http://dong1031.github.io/2018/08/17/一些GIF.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dong">
@@ -601,7 +601,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/17/SomeGif.html" itemprop="url">
+                <a class="post-title-link" href="/2018/08/17/一些GIF.html" itemprop="url">
                   SomeGif
                 </a>
               
@@ -687,7 +687,7 @@
 		
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/08/17/SomeGif.html#more" rel="contents">
+            <a class="btn" href="/2018/08/17/一些GIF.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -965,11 +965,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1049,7 +1045,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">Total Words:1.4k</span>
+  <span class="post-count">Total Words:1.2k</span>
 </div>
 
 
