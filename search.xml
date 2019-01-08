@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[从重装到配置]]></title>
-    <url>%2F2018%2F08%2F30%2F%E4%BB%8E%E9%87%8D%E8%A3%85%E5%88%B0%E9%85%8D%E7%BD%AE.html</url>
-    <content type="text"><![CDATA[有很多小伙伴不会重装电脑，惧怕重装电脑，他们以为重装电脑一定会把电脑里面全部数据（大概是一些.avi文件吧）都格式化掉，然后没有良好健康的生活体验，滑稽 现在的游戏随随便便都是几十G的（比如那些爱情动作dark♂作），重新下载会十分麻烦，当然网速贼快的请忽视，不玩游戏的也忽视吧 身为程序员，有许多环境变量需要配置（其实也不是很多啦··），还有很多奇奇怪怪的软件啥的，如果属鱼的话，那记忆时间就那几秒，装回来重新部署其实也挺麻烦的，对了，emmm，还有啥ssh那些密钥的，还有有的网站是记住密码的，然后忘记了，就很尴尬 写在前面本文的主要内容是重装系统，装驱动，装软件，配环境，我以win10和普通编程工具及比较干净无广告好用的日常软件为例，过程中大部分没有截图，emmm，主要是忘了，沉迷操作无法自拔，但是，我文字描述会尽量详细。 目录emmm，偷下懒，在左侧有目录 可能要用到的工具推荐 PE工具箱挺好用的启动盘制作软件，里面包含一些常用的工具，简单易用。 一个windows10镜像就是windows10.iso的，推荐去我告诉你下载（没错就是我告诉你而不是你告诉我，滑稽），纯正官方镜像干净无捆绑，不像雨林什么，什么木风的捆绑一些奇奇怪怪的旧版软件，等死 一个8G或以上的U盘，里面的东西记得先拿出来哦，不然格式化了找不到就很尴尬了。如果重装只是为了清掉C盘的话，可以把U盘的东西存到其他盘，如果是格式化全盘，或者，想重新分区的话，可以把U盘的东西放上云盘或者存到别人的电脑里面。 jdk，eclipse，maven，tomcat，mysql，redis，HBuilder，git for windows，finalshell，mockplus，notepad++，node.js，redisDesktopManager，powerdesigner(破解版直接百度就行了)这些也许是程序员可能会用到到的工具，不需要的可以跳过，问题不大，而且链接上都是我的推荐版本，目前使用并无问题，具体操作在后文有讲解。 Potplayer，一款不错的视频软件，干净无广告，功能强大。 网易云音乐，一块不错的音乐软件，干净好用，无广告，里面的人又有趣，说话又好听，超喜欢这里的，可用win10自带的uwp版，可以到应用商店获取。 irfanView，一款不错的看图片软件，干净无广告。 BandZip，一款不错的压缩软件，干净无广告。 迅雷x，一款不错的下载软件，虽然有一些广告，但是总体上问题不大，下种子文件使用起来还不错。 微信，QQ是两款比较常用的聊天软件，这里推荐的是桌面版的微信，和tim版的qq这个比较干爽没有太多的广告。 Chrome，谷歌浏览器，简约使用，界面清新，装一些扩展的插件用起来更加方便舒服。 office工具，推荐去我告诉你下载，然后破解，当然如果可以用学校邮箱可以注册office365教育版，也行，不过比较麻烦。 WPS，这里再推荐一个office工具，这个虽然有一些广告，不过无伤大雅，因为我确实没找到什么比较好的工具。 TeamViewer，这是一个能在任何防火墙和NAT代理的后台用于远程控制的应用程序，桌面共享和文件传输的简单且快速的解决方案。 百度网盘，你懂的。 emmm，为啥没安全软件输入法啥的，这些东西用自带的就行了，裸奔啥的问题不大，当然如果心里有点安慰有点保障的话，可以用360其实也行啦，修改一下配置，360其实也不会很烦，适当使用是最好的，还有火绒，相对于360我更推荐这个火绒 正文开始（bb了这么就终于正文了）]]></content>
+    <title><![CDATA[系时候重装一下系统维持一下生活的样子！！舒服]]></title>
+    <url>%2F2019%2F01%2F08%2F%E7%B3%BB%E6%97%B6%E5%80%99%E9%87%8D%E8%A3%85%E4%B8%80%E4%B8%8B%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8C%81%E4%B8%80%E4%B8%8B%E7%94%9F%E6%B4%BB%E7%9A%84%E6%A0%B7%E5%AD%90%EF%BC%81%EF%BC%81%E8%88%92%E6%9C%8D.html</url>
+    <content type="text"><![CDATA[写在前面手提太菜，只能重装一下系统维持一下生活的样子，等凉 备份准备U盘或者移动硬盘，存爆资料，能上传百度云嘅先上爆 收藏夹：https://www.jianshu.com/https://mvnrepository.com/https://www.bilibili.com/http://www.dilidili.wang/https://github.com/https://coding.net/http://www.hostbuf.com/https://www.jianshu.com/p/42324b06e655https://www.zhihu.com/https://yue.micblo.com/ 工具准备 系统：windows10 环境和ide：jdk，eclipse，maven，mysql，HBuilerX，git for windows，sublime，node.js，powerdesigner，Android Studio，Android SDK，ArcGis，AutoCAD 压缩：BandZip 图片：Honeyview 视频音频播放器：Potplayer 音乐：网易云音乐 下载：迅雷x（下种子和链接），IDM下载视频音频其他等等 聊天：微信、QQ（TIM） 浏览器：Chrome（扩展：Adblock Plus，Google 翻译，应用：postman） 科学上网：shadowsocksr，新界SSR office工具：微软的，需要破解 远程控制和文件传输：TeamViewer 云盘：百度网盘 娱乐：WeGame，DNF，哔哩哔哩客户端 驱动：驱动人生 开始干活 百度输入windows10，点击windows10下载那个网页，然后下爆，然后更新这台电脑，完事 个性化设置，BandZip压缩软件先装爆，IDM解压，科学上网解压，开爆科学上网去摸Chrome，应用商店摸爆 驱动人生下载非显卡驱动，然后去英伟达官网下载显卡驱动 Honeyview，Potplayer，网易云音乐，迅雷X，微信和TIM，百度云盘，哔哩哔哩客户端，TeamViewer，WeGame 环境和ide装爆，先jdk和mysql再其他 DNF下载，office下载，U盘文件，百度云文件，下爆 后台关爆，自启动关爆，win10无用东西卸载卸爆 具体环境配置 jdk：下载安装，C盘默认x86文件，新建JAVA_HOME，值为jdk地址，然后在path编辑，加一行%JAVA_HOME%\bin，最后cmd输入java，javac，java-version看看情况 mysql：密码root maven：新建MAVEN_HOME，值为maven地址，然后path编辑，加一行%MAVEN_HOME%\bin，在目录下用shift加右键打开shell然后mkdir .m2repository创建包路径，在目录下/conf/setting.xml修改如下： &lt;!-- localRepository | The path to the local repository maven will use to store artifacts. | | Default: ${user.home}/.m2/repository &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt; --&gt; &lt;!-- mirrors | This is a list of mirrors to be used in downloading artifacts from remote repositories. | | It works like this: a POM may declare a repository to use in resolving certain artifacts. | However, this repository may have problems with heavy traffic at times, so people have mirrored | it to several places. | | That repository definition will have a unique id, so we can create a mirror reference for that | repository, to be used as an alternate download site. The mirror site will be the preferred | server for that repository. |--&gt; &lt;mirrors&gt; &lt;!-- mirror | Specifies a repository mirror site to use instead of a given repository. The repository that | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used | for inheritance and direct lookup purposes, and must be unique across the set of mirrors. | &lt;mirror&gt; &lt;id&gt;mirrorId&lt;/id&gt; &lt;mirrorOf&gt;repositoryId&lt;/mirrorOf&gt; &lt;name&gt;Human Readable Name for this Mirror.&lt;/name&gt; &lt;url&gt;http://my.repository.com/repo/path&lt;/url&gt; &lt;/mirror&gt; --&gt; &lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;/mirror&gt; &lt;/mirrors&gt; eclipse：配置maven（包括包路径），jdk，编码格式 Android Studio：，AndroidSDK位置 ArcGis：先装desktop再装server AutoCAD：破解破爆 powerdesigner：破解破爆 node.js：自动配置，去path看就完事了 HBuilerX，git for windows，sublime：安装就完事了]]></content>
       <categories>
-        <category>配置</category>
+        <category>new一下</category>
       </categories>
       <tags>
-        <tag>装系统</tag>
-        <tag>环境配置</tag>
-        <tag>装软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[一些Gif]]></title>
-    <url>%2F2018%2F08%2F17%2F%E4%B8%80%E4%BA%9BGIF.html</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>搞笑</category>
-      </categories>
-      <tags>
-        <tag>gif</tag>
-        <tag>哲♂学</tag>
-        <tag>dog&amp;cat</tag>
+        <tag>重装</tag>
+        <tag>系统</tag>
+        <tag>配环境</tag>
       </tags>
   </entry>
   <entry>
